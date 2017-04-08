@@ -1,4 +1,4 @@
-#formac
+# Formac
 Format any MAC address for use with multiple vendor devices that use different
 MAC formatting
 
@@ -8,7 +8,7 @@ use `aa:bb:cc:11:22:33`.
 This tool is just a handy way to take any of these formats and print out any
 other format.
 
-###usage:
+### Usage:
 ```
 ./formac.py aabbcc112233
 ./formac.py aa:bb:cc:11:22:33
