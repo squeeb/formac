@@ -1,10 +1,11 @@
-#ciscomac
-Format any MAC address for use with Cisco (and most other vendors) devices
+#formac
+Format any MAC address for use with multiple vendor devices that use different
+MAC formatting
 
 ###usage:
 ```
-./ciscomac.py aabbcc112233
-./ciscomac.py aa:bb:cc:11:22:33
-./ciscomac.py aa-bb-cc-11-22-33
-./ciscomac.py aabb.cc11.2233
+./formac.py aabbcc112233
+./formac.py aa:bb:cc:11:22:33
+./formac.py aa-bb-cc-11-22-33
+./formac.py aabb.cc11.2233
 ```
