@@ -38,7 +38,7 @@ def interval():
 
 def seperator():
     if args.seperator:
-        if args.seperator == 'None':
+        if args.seperator == 'none':
             return ''
         else:
             return args.seperator
