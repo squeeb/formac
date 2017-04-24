@@ -21,6 +21,7 @@ mac_address = mac_address_raw.translate(None, '.:-_')
 if args.cisco:
     args.group = 4
     args.seperator='.'
+    args.lowercase=True
 
 def is_hex(s):
     return all(c in string.hexdigits for c in s)
