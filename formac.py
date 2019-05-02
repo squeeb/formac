@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import string
@@ -16,7 +16,7 @@ parser.set_defaults(cisco=False)
 
 args = parser.parse_args()
 mac_address_raw = args.mac_address_raw[0]
-mac_address = mac_address_raw.translate(None, '.:-_')
+mac_address = mac_address_raw.translate(mac_address_raw.maketrans('.:-_','.:-_','.:-_'))
 
 if args.cisco:
     args.group = 4
@@ -69,7 +69,7 @@ def generate_mac(mac_address, seperator, interval):
             for i in range(0, len(mac_address), interval))
 
 if is_mac_address(mac_address):
-    print generate_mac(mac_address, seperator(), interval())
+    print(generate_mac(mac_address, seperator(), interval()))
 else:
-    print "%s is not a valid MAC address" % mac_address_raw
+    print("%s is not a valid MAC address" % mac_address_raw)
     exit(1)
