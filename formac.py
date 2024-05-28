@@ -85,7 +85,7 @@ def generate_mac(mac_address, seperator, interval):
 def oui_lookup(mac_address):
     mac_addr = generate_mac(mac_address, ':', 2)
     oui = ':'.join(mac_addr.split(':')[0:3]).upper().strip()
-    r = requests.get('https://gitlab.com/wireshark/wireshark/-/raw/master/manuf')
+    r = requests.get('https://www.wireshark.org/download/automated/data/manuf')
     if r.status_code == 200:
         matches = re.findall("%s.*" % oui, r.text, re.MULTILINE)
         if matches:
